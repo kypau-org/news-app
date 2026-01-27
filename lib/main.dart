@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_trpl_c/views/splash_view.dart';
+import 'package:get/get.dart';
+import 'package:news_app_trpl_c/routes/app_pages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +12,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => SplashView(),
-        // '/detail': (context) => DetailPage(),
-      },
+    return GetMaterialApp(
+      title: 'News App',
+      initialRoute: AppPages.INITIAL,
+      getPages: AppPages.routes,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
