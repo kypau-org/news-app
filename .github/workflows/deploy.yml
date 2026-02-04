@@ -28,6 +28,9 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
       
+      - name: Create .env file
+        run: echo "API_KEY=cf318b5849464df38a1eac3fd10159a8" > .env
+      
       - name: Build web
         run: flutter build web --release --base-href "/news-app/"
       
