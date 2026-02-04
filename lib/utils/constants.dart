@@ -6,6 +6,7 @@ class Constants {
 
   // EndPoints
   static const String topHeadlines = "/top-headlines";
+  static const String everything = "/everything";
 
   // Categories
   static const List<String> categories = [

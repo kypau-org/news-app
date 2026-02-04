@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
+import 'package:news_app_trpl_c/bindings/home_binding.dart';
 import 'package:news_app_trpl_c/views/home_view.dart';
 import 'package:news_app_trpl_c/views/splash_view.dart';
+import 'package:news_app_trpl_c/views/newsdetail_view.dart';
+
 
 part 'app_routes.dart';
 
@@ -12,6 +15,7 @@ class AppPages {
 
   static final routes = [
     GetPage(name: Routes.SPLASH, page: () => SplashView()),
-    GetPage(name: Routes.HOME, page: () => HomeView()),
+    GetPage(name: Routes.HOME, page: () => HomeView(), binding: HomeBinding()),
+    GetPage(name: Routes.NewsDetail, page: () => NewsDetailView()),
   ];
 }
